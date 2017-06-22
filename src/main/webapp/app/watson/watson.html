@@ -8,10 +8,14 @@
             </div>
         </div>
 
-        <div ng-repeat="response in vm.conversation.responses">
-            <div>
-                {{response.message}}
+        <div ng-if="vm.isReady">
+        <slick infinite="true" slides-to-show="3" init-onload=true data="vm.conversation.responses" slides-to-scroll="3">
+            <div ng-repeat="response in vm.conversation.responses">
+                <div ng-click="vm.answer(response.message)">
+                    {{response.message}}
+                </div>
             </div>
+        </slick>
         </div>
 
         <div class="row">
