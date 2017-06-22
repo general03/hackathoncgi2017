@@ -10,6 +10,15 @@ public class Pathogene {
     private List<String> symptomes;
     private List<String> conduites;
 
+    public String getUrlImage() {
+        return urlImage;
+    }
+
+    public void setUrlImage(String urlImage) {
+        this.urlImage = urlImage;
+    }
+
+    private String urlImage;
 
     public String getNom() {
         return nom;
