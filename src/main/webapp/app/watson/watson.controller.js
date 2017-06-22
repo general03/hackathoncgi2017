@@ -43,12 +43,5 @@
             });
 
         }
-
-
-
-        vm.interact = interact;
-        function interact() {
-            return
-        }
    }
 })();
