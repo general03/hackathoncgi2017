@@ -13,6 +13,7 @@
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css">
+    <link rel="stylesheet" href="bower_components/AngularJS-Toaster/toaster.css">
     <!-- endinject -->
     <!-- endbuild -->
     <!-- build:css content/css/main.css -->
@@ -32,7 +33,7 @@
         </div>
 
         <div class="footer" ng-cloak>
-            <p data-translate="footer">This is your footer</p>
+            <p>L'information sur cette application est fournie à titre d'information seulement et elle ne peut, en aucun cas, remplacer un avis médical professionnel ou d'un ophtalmologue</p>
         </div>
     </div>
     <noscript>
@@ -80,12 +81,17 @@
     <script src="bower_components/bootstrap-ui-datetime-picker/dist/datetime-picker.js"></script>
     <script src="bower_components/ng-file-upload/ng-file-upload.js"></script>
     <script src="bower_components/ngInfiniteScroll/build/ng-infinite-scroll.js"></script>
+    <script src="bower_components/AngularJS-Toaster/toaster.js"></script>
     <!-- endinject -->
     <!-- endbuild -->
 
     <!-- build:js app/app.js  -->
     <!-- inject:js -->
     <script src="app/app.module.js"></script>
+    <script src="app/watson/watson.state.js"></script>
+    <script src="app/watson/watson.controller.js"></script>
+    <script src="app/urgency/urgency.state.js"></script>
+    <script src="app/urgency/urgency.controller.js"></script>
     <script src="app/services/user/user.service.js"></script>
     <script src="app/services/profiles/profile.service.js"></script>
     <script src="app/services/profiles/page-ribbon.directive.js"></script>
@@ -184,12 +190,7 @@
     <script src="app/account/activate/activate.state.js"></script>
     <script src="app/account/activate/activate.controller.js"></script>
     <script src="app/account/account.state.js"></script>
-    <script src="app/urgency/urgency.controller.js"></script>
-    <script src="app/urgency/urgency.state.js"></script>
-    <script src="app/watson/watson.controller.js"></script>
-    <script src="app/watson/watson.state.js"></script>
     <!-- endinject -->
     <!-- endbuild -->
-
 </body>
 </html>

@@ -1,16 +1,26 @@
 <div ng-cloak>
-        <h1 data-translate="home.title">Théa dry eye!</h1>
 
-        <div class="alert alert-danger" role="alert">
-            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-            <div class="sr-only">Détecter les cas d'urgences :</div>
-            <p>Détecter les cas d'urgences :</p>
-            <ul class="list-group">
-                <li class="list-group-item">Douleur intense, photophobie intense, baisse de la vision</li>
-                <li class="list-group-item">Impression d'éclairs lumineux, voile noire</li>
-                <li class="list-group-item">Présence de corps étranger</li>
-                <li class="list-group-item">Traumatisme (plaie, contusion par impact, brûmure par acide ou base)</li>
-            </ul>
-        </div>
+    <div class="alert alert-danger" role="alert">
+        <toaster-container toaster-options="{
+  'closeButton': false,
+  'body-output-type': 'trustedHtml',
+  'position-class': 'toast-top-full-width',
+}"></toaster-container>
+
+        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+        <span class="sr-only">Détecter les cas d'urgences :</span>
+        Détecter les cas d'urgences :
+        <hr>
+        <ul class="list-group">
+            <li class="list-group-item">Douleur intense, photophobie intense, baisse de la vision</li>
+            <li class="list-group-item">Impression d'éclairs lumineux, voile noire</li>
+            <li class="list-group-item">Présence de corps étranger</li>
+            <li class="list-group-item">Traumatisme (plaie, contusion par impact, brûmure par acide ou base)</li>
+        </ul>
+    </div>
+
+    <button type="button" class="btn btn-default alert-info" ng-click="goWatson()">Je continue</button>
+
+    <button type="button" class="btn btn-default alert-danger pull-right" ng-click="goPop()">J'ai un cas d'urgence</button>
 
 </div>
