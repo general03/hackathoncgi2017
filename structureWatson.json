@@ -1,0 +1,9 @@
+{
+    "output": {
+        "text": {
+            "values": [
+                "{ 'question': 'Avez-vous des rougeurs ?', 'responses': [ { 'message': 'Diffuses uni ou bilatérales', 'picture': '/images/1-1.png' }, { 'message': 'Bilatérales et larmoiements', 'picture': '/images/1-2.png' } , { 'message': 'Localisés en nappe unilatérale', 'picture': '/images/1-3.png' } ] }"
+            ]
+        }
+    }
+}
