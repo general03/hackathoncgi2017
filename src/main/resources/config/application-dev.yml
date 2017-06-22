@@ -44,8 +44,8 @@ spring:
     mail:
         host: smtp.gmail.com
         port: 587
-        user: antoine.gueleraud@gmail.com
-        password: rcepenconar123**
+        user: ...
+        password: ...
         protocol: smtp
         tls: true
         from: thea@gmail.com
