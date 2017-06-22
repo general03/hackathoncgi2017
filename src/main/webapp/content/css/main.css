@@ -345,3 +345,85 @@ Thea CSS
 #toast-container > div {
     opacity:1;
 }
+
+.text-right {
+    text-align: right;
+}
+.text-left {
+    text-align: left;
+}
+
+.roundedImage{
+overflow: hidden;
+-webkit-border-radius: 70px;
+-moz-border-radius: 70px;
+border-radius: 70px;
+width: 150px;
+height: 130px
+}
+
+hr.dash-left-top {
+	background-color: #fff;
+	border-top: 2px dashed #8c8b8b;
+	transform: rotate(5deg) translateX(80px);
+    width: 250px;
+}
+
+hr.dash-left-bottom {
+	background-color: #fff;
+	border-top: 2px dashed #8c8b8b;
+	transform: rotate(-10deg) translate(80px, 70px);
+    width: 250px;
+}
+
+hr.dash-right-top {
+	background-color: #fff;
+	border-top: 2px dashed #8c8b8b;
+	transform: rotate(-10deg) translate(-260px, -30px);
+    width: 250px;
+}
+
+hr.dash-right-bottom {
+	background-color: #fff;
+	border-top: 2px dashed #8c8b8b;
+	transform: rotate(10deg) translate(-270px, 130px);
+    width: 200px;
+
+}
+
+.corps-img {
+     position: absolute;
+     margin-left: 55px;
+     margin-top: -15px;
+     z-index: 9;
+ }
+
+.douleur-img {
+    position: absolute;
+    margin-left: 30px;
+}
+
+.voile-img {
+    position: absolute;
+    margin-left: 80px;
+    margin-top: 10px;
+}
+
+.plaie-img {
+    position: absolute;
+}
+
+#overlay {
+    background-color: #333;
+    opacity: 0.8;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 100;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-image: url('ajax-loader.gif');
+    background-position: center;
+    background-repeat: no-repeat;
+}

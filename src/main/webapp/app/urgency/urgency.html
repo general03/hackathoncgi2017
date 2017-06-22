@@ -1,12 +1,64 @@
 <div ng-cloak>
 
-    <div class="alert alert-danger" role="alert">
+    <div>
+        <div id="overlay" class="hide"></div>
         <toaster-container toaster-options="{
-  'closeButton': false,
-  'body-output-type': 'trustedHtml',
-  'position-class': 'toast-top-full-width',
-}"></toaster-container>
+          'closeButton': false,
+          'body-output-type': 'trustedHtml',
+          'position-class': 'toast-top-full-width'
+        }" ng-click="goHome()">
+        </toaster-container>
 
+
+
+
+        <div class="row">
+            <div class="col-xs-4 text-right">Présence de corps étrangé</div>
+            <div class="col-xs-4"></div>
+            <div class="col-xs-4 text-left">Douleur intense, photophobie intense, baisse de la vision</div>
+        </div>
+        <div class="row">
+            <div class="col-xs-4"></div>
+            <div class="col-xs-4">
+                <img src="content/images/urgence_plaie.png" class="center-block" />
+            </div>
+            <div class="col-xs-4"></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-4 text-right">Impression d'éclairs lumineux, voile noire</div>
+            <div class="col-xs-4"></div>
+            <div class="col-xs-4 text-left">Traumatisme (plaie, contusion par impact, brûmure par acide ou base)</div>
+        </div>
+
+
+        <!--<div class="row">
+            <div class="col-xs-4">Présence de corps étrangé</div>
+            <div class="col-xs-4"></div>
+            <div class="col-xs-4">Douleur intense, photophobie intense, baisse de la vision</div>
+        </div>
+        <div class="row">
+            <div class="col-xs-4">
+                <img src="content/images/urgence_corps.png" class="corps-img hidden-xs" width="60"/>
+                <hr class="dash-left-top hidden-xs">
+                <hr class="dash-left-bottom hidden-xs">
+                <img src="content/images/urgence_plaie.png" class="voile-img hidden-xs" width="60"/>
+            </div>
+            <div class="col-xs-4">
+                <img src="content/images/oeil_lois.png" class="roundedImage" width="150"/>
+            </div>
+            <div class="col-xs-4">
+                <img src="content/images/urgence_plaie.png" class="douleur-img hidden-xs" width="60"/>
+                <hr class="dash-right-top hidden-xs">
+                <hr class="dash-right-bottom hidden-xs">
+                <img src="content/images/urgence_plaie.png" class="plaie-img hidden-xs" width="60"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-4">Impression d'éclairs lumineux, voile noire</div>
+            <div class="col-xs-4"></div>
+            <div class="col-xs-4">Traumatisme (plaie, contusion par impact, brûmure par acide ou base)</div>
+        </div>!-->
+<!--
         <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
         <span class="sr-only">Détecter les cas d'urgences :</span>
         Détecter les cas d'urgences :
@@ -17,7 +69,9 @@
             <li class="list-group-item">Présence de corps étranger</li>
             <li class="list-group-item">Traumatisme (plaie, contusion par impact, brûmure par acide ou base)</li>
         </ul>
-    </div>
+    </div>-->
+
+        <br>
 
     <button type="button" class="btn btn-default alert-info" ng-click="goWatson()">Je continue</button>
 
