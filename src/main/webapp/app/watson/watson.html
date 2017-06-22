@@ -1,11 +1,18 @@
 <div ng-cloak>
-    <label>Your question</label>
-
-    <button ng-click="vm.initConversation()" type="button" class="btn btn-warning" aria-haspopup="true" aria-expanded="false">
-        Demarrer la conversation
-    </button>
-
     <form class="form" role="form" ng-submit="vm.interact()">
+
+        <div class="row">
+            <div class="col-lg-2 col-sm-2"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span></div>
+            <div class="col-lg-10 col-sm-10" style="text-align: center;">
+                {{ vm.conversation.question }}
+            </div>
+        </div>
+
+        <div ng-repeat="response in vm.conversation.responses">
+            <div>
+                {{response.message}}
+            </div>
+        </div>
 
         <div class="row">
             <div class="col-lg-6">
@@ -13,7 +20,7 @@
                     <span class="input-group-addon">
                     <input type="checkbox" aria-label="...">
                     </span>
-                    <input type="text" class="form-control" aria-label="..." readonly="true" value="Text here" ng-model="vm.question">
+                    <input type="text" class="form-control" aria-label="..." readonly="true" value="Text here" ng-model="vm.conversation.question">
                     <input type="text" class="form-control" aria-label="..." readonly="true" value="Text here" ng-model="vm.message">
                 </div>
             </div>
