@@ -14,6 +14,11 @@ node_modules/
 npm-debug.log.*
 
 ######################
+# Bower components
+######################
+src/main/webapp/bower_components
+
+######################
 # SASS
 ######################
 .sass-cache/

@@ -3,15 +3,7 @@ package com.cgi.hackathon.web.rest;
 import com.cgi.hackathon.service.BotService;
 import com.ibm.watson.developer_cloud.conversation.v1.model.MessageResponse;
 import io.swagger.annotations.ApiParam;
-import org.springframework.data.domain.Pageable;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * Created by gouttebessisg on 22/06/2017.
@@ -26,7 +18,7 @@ public class WatsonResource {
         this.watsonService = watsonService;
     }
 
-    @GetMapping("/watson-conversation")
+    @PostMapping("/watson-conversation")
     public MessageResponse interact(@ApiParam MessageResponse context, @ApiParam String message) {
         return watsonService.interact(context, message);
     }
