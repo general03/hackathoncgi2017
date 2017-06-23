@@ -495,6 +495,12 @@ body{
     font-style : bold;
  }
 
+.title-ttsmall{
+    font-family: 'Laila', serif;
+    font-size:12px;
+    font-style : bold;
+ }
+
 .text-petit {
 font-size:14px;
 }
