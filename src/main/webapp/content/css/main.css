@@ -473,4 +473,13 @@ body{
 
 .title{
     font-family: DINPRO-Medium;
+    vertical-align: top;
+    width: 170px;
+    display: inline-block;
+    text-align: right;
+    position: absolute;
+    right: 5px;
+    top: 3px;
+    color: white;
+
 }
