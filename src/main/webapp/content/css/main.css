@@ -467,22 +467,31 @@ hr.dash-right-bottom {
     height: 50px;
 }
 body{
-    font-family: CaviarDreams;
+   font-family: 'Delius', cursive;
     font-size: 16px;
 }
 
 .title{
-    font-family: DINPRO-Medium;
-    vertical-align: top;
-    width: 170px;
+    font-family: 'Laila', serif;
+    vertical-align: middle;
+    font-size:12px;
+    width: 300px;
     display: inline-block;
     text-align: right;
+    padding-top:13px;
     position: absolute;
     right: 5px;
     top: 3px;
     color: white;
 
 }
+
+.title-small{
+    font-family: 'Laila', serif;
+    font-size:8px;
+    font-style : bold;
+ }
+
 .export-pdf {
     background: url('../images/printer.png') #f2f2f2;
     background-position: -5px -7px;
