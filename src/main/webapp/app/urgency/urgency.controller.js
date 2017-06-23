@@ -31,5 +31,9 @@
         $scope.goWatson = function() {
             $location.url('/watson/');
         };
+
+        $scope.goAlert = function() {
+            $location.url('/alert');
+        };
     }
 })();
