@@ -29,7 +29,7 @@
 	    };
 
         $scope.goWatson = function() {
-            $location.url('/watson');
+            $location.url('/watson/');
         };
     }
 })();
