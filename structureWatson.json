@@ -1,9 +1,14 @@
-{
-    "output": {
-        "text": {
-            "values": [
-                "{ 'question': 'Avez-vous des rougeurs ?', 'responses': [ { 'message': 'Diffuses uni ou bilatérales', 'picture': '/images/1-1.png' }, { 'message': 'Bilatérales et larmoiements', 'picture': '/images/1-2.png' } , { 'message': 'Localisés en nappe unilatérale', 'picture': '/images/1-3.png' } ] }"
-            ]
-        }
-    }
-}
+{ 'question': 'Avez-vous des rougeurs ?', 'responses': [ { 'message': 'Diffuses uni ou bilatérales', 'picture': '/images/1-1.png' }, { 'message': 'Bilatérales et larmoiements', 'picture': '/images/1-2.png' } , { 'message': 'Localisés en nappe unilatérale', 'picture': '/images/1-3.png' } ], 'retour': 'retourq1', 'symptomelib': '', 'symptomecode': '' }
+
+
+{ 'question': 'Avez-vous des sécrétions oculaires ?', 'responses': [ { 'message': 'Oui, purulentes', 'picture': '/images/2-1.png' }, { 'message': 'Oui, claires', 'picture': '/images/2-2.png' } , { 'message': 'Absence de sécrétions', 'picture': '/images/2-3.png' } ], 'retour': 'retourq1', 'symptomelib': '', 'symptomecode': '' }
+
+{ 'question': '', 'responses': [ ], 'retour': 'retourq1', 'symptomelib': 'Conjonctivite allergique', 'symptomecode': 'ConjonctiviteAllergique' }
+{ 'question': '', 'responses': [ ], 'retour': 'retourq1', 'symptomelib': 'Fragilité capillaire conjonctivale', 'symptomecode': 'FragiliteCapillaireConjonctivale' }
+{ 'question': '', 'responses': [ ], 'retour': 'retourq2', 'symptomelib': 'Conjonctivite bactérienne', 'symptomecode': 'ConjonctiviteBacterienne' }
+{ 'question': '', 'responses': [ ], 'retour': 'retourq2', 'symptomelib': 'Conjonctivite virale', 'symptomecode': 'ConjonctiviteVirale' }
+
+{ 'question': 'Ressentez-vous une sensation de sécheresse oculaire ?', 'responses': [ { 'message': 'Oui', 'picture': '/images/3-1.png' }, { 'message': 'Non', 'picture': '/images/3-2.png' } ], 'retour': 'retourq2', 'symptomelib': '', 'symptomecode': '' }
+
+{ 'question': '', 'responses': [ ], 'retour': 'retourq3', 'symptomelib': 'Irritations conjonctivales chroniques non infectieuses', 'symptomecode': 'IrritationConjonctivaleChroniqueNonInfectieuse' }
+{ 'question': '', 'responses': [ ], 'retour': 'retourq3', 'symptomelib': 'Sécheresse oculaire', 'symptomecode': 'SecheresseOculaire' }

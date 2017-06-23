@@ -12,16 +12,26 @@ public class SecheresseOculaire extends Pathogene{
         setNom("Sécheresse oculaire");
 
         List<String> symptList = new ArrayList<>();
-        symptList.add("");
-        symptList.add("");
-        symptList.add("");
+        symptList.add("Absence de sécrétion");
+        symptList.add("Rougeur diffuse légère uni ou bilatérale");
+        symptList.add("Larmoiement/grain de sable");
+        symptList.add("Sensation d'oeil sec");
+        symptList.add("Picotements");
+        symptList.add("Clignement des paupières");
         setSymptomes(symptList);
 
         List<String> condList = new ArrayList<>();
-        condList.add("");
-        condList.add("");
-        condList.add("");
+        condList.add("[1] Lavage oculaire");
+        condList.add("[2] Instiller un substitut lacrymal");
         setConduites(condList);
+
+        setConseilPrincipal(null);
+
+        List<String> symptConseilList = new ArrayList<>();
+        setConseilSymptome(symptConseilList);
+
+        List<String> risqueConseilList = new ArrayList<>();
+        setConseilSymptome(risqueConseilList);
 
         setUrlImage("images/secheresse-oculaire.png");
     }

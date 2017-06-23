@@ -12,16 +12,25 @@ public class IrritationConjonctivaleChroniqueNonInfectieuse extends Pathogene {
         setNom("Irritations conjonctivales chroniques non infectieuses");
 
         List<String> symptList = new ArrayList<>();
-        symptList.add("");
-        symptList.add("");
-        symptList.add("");
+        symptList.add("Absence de sécrétion");
+        symptList.add("Rougeur diffuse légère uni ou bilatérale");
+        symptList.add("Exposition à un agent irritant (soleil, piscine)");
+        symptList.add("Petit larmoiement");
+        symptList.add("Picotements");
         setSymptomes(symptList);
 
         List<String> condList = new ArrayList<>();
-        condList.add("");
-        condList.add("");
-        condList.add("");
+        condList.add("[1] Lavage oculaire");
+        condList.add("[2] Instiller un collyre anti-irritation");
         setConduites(condList);
+
+        setConseilPrincipal("Consulter un médecin si persistance des symptômes au-delà des 48 h");
+
+        List<String> symptConseilList = new ArrayList<>();
+        setConseilSymptome(symptConseilList);
+
+        List<String> risqueConseilList = new ArrayList<>();
+        setConseilSymptome(risqueConseilList);
 
         setUrlImage("images/irritation-conjonctivale-chronique-non-infectieuse.png");
     }
