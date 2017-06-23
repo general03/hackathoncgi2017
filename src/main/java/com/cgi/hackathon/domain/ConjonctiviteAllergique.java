@@ -20,9 +20,9 @@ public class ConjonctiviteAllergique extends Pathogene{
         setSymptomes(symptList);
 
         List<String> condList = new ArrayList<>();
-        condList.add("[1] Rechercher et supprimer dans la mesure du possible l'allergène");
-        condList.add("[2] Lavage oculaire : laver abondamment les culs-de-sac conjonctivaux");
-        condList.add("[3] Instiller un collyre antiallergique");
+        condList.add("Rechercher et supprimer dans la mesure du possible l'allergène");
+        condList.add("Lavage oculaire : laver abondamment les culs-de-sac conjonctivaux");
+        condList.add("Instiller un collyre antiallergique");
         setConduites(condList);
 
         setConseilPrincipal("Consulter un médecin si persistance des symptômes au-delà des 48 h");

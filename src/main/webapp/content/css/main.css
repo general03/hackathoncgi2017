@@ -390,6 +390,9 @@ hr.dash-right-bottom {
     width: 200px;
 
 }
+hr.double-dash {
+	border-top: 3px double #8c8b8b;
+}
 
 .corps-img {
      position: absolute;

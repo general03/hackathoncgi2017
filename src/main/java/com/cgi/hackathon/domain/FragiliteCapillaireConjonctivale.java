@@ -19,9 +19,9 @@ public class FragiliteCapillaireConjonctivale extends Pathogene{
         setSymptomes(symptList);
 
         List<String> condList = new ArrayList<>();
-        condList.add("[1] Lavage oculaire");
-        condList.add("[2] Instiller un collyre à visé vasculo-protectrice");
-        condList.add("[3] Rassurer le patient généralement inquiet");
+        condList.add("Lavage oculaire");
+        condList.add("Instiller un collyre à visé vasculo-protectrice");
+        condList.add("Rassurer le patient généralement inquiet");
         setConduites(condList);
 
         setConseilPrincipal("Consulter un médecin si persistance des symptômes au-delà des 48 h");
