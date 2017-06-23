@@ -502,8 +502,12 @@ body{
  }
 
 .text-petit {
-font-size:14px;
-}
+ font-size:14px;
+ }
+
+ .text-grand {
+  font-size:18px;
+  }
 
 .export-pdf {
     background: url('../images/printer.png') #f2f2f2;
