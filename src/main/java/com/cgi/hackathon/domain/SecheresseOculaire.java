@@ -33,6 +33,8 @@ public class SecheresseOculaire extends Pathogene{
         List<String> risqueConseilList = new ArrayList<>();
         setConseilSymptome(risqueConseilList);
 
+        setHasOsdi(true);
+
         setUrlImage("images/secheresse-oculaire.png");
     }
 }

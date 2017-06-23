@@ -6,14 +6,23 @@ import java.util.List;
 /**
  * Created by guelerauda on 22/06/2017.
  */
-public class Pathogene implements Serializable{
-    public String nom;
+public class Pathogene implements Serializable {
+    private String nom;
     private List<String> symptomes;
     private List<String> conduites;
     private String conseilPrincipal;
     private List<String> conseilSymptome;
     private List<String> conseilRisque;
     private String urlImage;
+    private boolean hasOsdi;
+
+    public boolean isHasOsdi() {
+        return hasOsdi;
+    }
+
+    public void setHasOsdi(boolean hasOsdi) {
+        this.hasOsdi = hasOsdi;
+    }
 
     public String getConseilPrincipal() {
         return conseilPrincipal;

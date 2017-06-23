@@ -32,6 +32,8 @@ public class IrritationConjonctivaleChroniqueNonInfectieuse extends Pathogene {
         List<String> risqueConseilList = new ArrayList<>();
         setConseilSymptome(risqueConseilList);
 
+        setHasOsdi(false);
+
         setUrlImage("images/irritation-conjonctivale-chronique-non-infectieuse.png");
     }
 }

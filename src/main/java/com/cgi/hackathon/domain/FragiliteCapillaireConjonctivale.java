@@ -32,6 +32,7 @@ public class FragiliteCapillaireConjonctivale extends Pathogene{
         List<String> risqueConseilList = new ArrayList<>();
         setConseilSymptome(risqueConseilList);
 
+        setHasOsdi(false);
 
         setUrlImage("images/fragilite-capillaire-conjonctivale.png");
     }
