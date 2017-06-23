@@ -1,24 +1,27 @@
 <div ng-cloak>
-    <h1 data-translate="home.title"></h1>
+    <h1 class="text-center">Diagnostique : {{ vm.patho.name }}</h1>
 
-    <div class="well" style="width:auto">
-        <div class="media">
-            <a class="pull-left" href="#">
-                <img class="media-object" width="100px" src="http://i1.allaboutvision.com/i/conditions-2016/dry-eye-1200x630.png">
-            </a>
-            <div class="media-body">
-                <h4 class="media-heading">Dynamic Name</h4>
-            </div>
-        </div>
-        <div ng-repeat="pat in vm.patho">
-            {{ pat.symptList }}
+    <img class="img-responsive center-block" width="100px" src="{{ vm.patho.urlImage }}">
 
-        </div>
-        <p><font color="red"> Dynamic Text </font> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate.
-            Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis
-            dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan.
-            Aliquam in felis sit amet augue.</p>
-    </div>
+    <h4 class="text-center">Conduites à tenir</h4>
+    <ol ng-repeat="pat in vm.patho">
+        <li>{{ pat.conduites }}</li>
+    </ol>
+
+    <h4 class="text-center">Conseils principales</h4>
+    <ol ng-repeat="pat in vm.patho">
+        <li>{{ pat.conseilPrincipal }}</li>
+    </ol>
+
+    <h4 class="text-center">Conseils Symptome</h4>
+    <ol ng-repeat="pat in vm.patho">
+        <li>{{ pat.conseilSymptome }}</li>
+    </ol>
+
+    <h4 class="text-center">Conseils Risques</h4>
+    <ol ng-repeat="pat in vm.patho">
+        <li>{{ pat.conseilRisque }}</li>
+    </ol>
 
     <input type="button" value="&nbsp;Retour accueil" class="btn btn-default return-home" ng-click="goHome()">
 

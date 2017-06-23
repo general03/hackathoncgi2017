@@ -1,12 +1,13 @@
 package com.cgi.hackathon.domain;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * Created by guelerauda on 22/06/2017.
  */
-public class Pathogene {
-    private String nom;
+public class Pathogene implements Serializable{
+    public String nom;
     private List<String> symptomes;
     private List<String> conduites;
     private String conseilPrincipal;
