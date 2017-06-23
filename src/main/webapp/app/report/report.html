@@ -79,6 +79,7 @@
         <div class="col-xs-12 col-lg-12 ">
             <input type="button" value="&nbsp;Quitter" class="btn btn-default pull-left return-home" ng-click="goUrgency()">
             <button ng-if="vm.id === 'SecheresseOculaire'" type="button" class="btn btn-default pull-right export-pdf"><a target="_blank" ng-href="/pdfexport/{{vm.id}}?osdi={{vm.osdi.result}}">Exporter en PDF</a></button>
+            <button ng-if="vm.id !== 'SecheresseOculaire'" type="button" class="btn btn-default pull-right export-pdf"><a target="_blank" ng-href="/pdfexport/{{vm.id}}">Exporter en PDF</a></button>
         </div>
     </div>
 </div>
