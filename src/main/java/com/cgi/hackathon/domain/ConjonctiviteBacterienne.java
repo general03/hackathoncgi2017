@@ -41,7 +41,7 @@ public class ConjonctiviteBacterienne extends Pathogene{
         risqueConseilList.add("Corticothérapie locale");
         risqueConseilList.add("Lentilles de contact");
         risqueConseilList.add("Obstruction des glandes lacrymales");
-        setConseilSymptome(risqueConseilList);
+        setConseilRisque(risqueConseilList);
 
         setHasOsdi(false);
 
