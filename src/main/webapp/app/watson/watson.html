@@ -1,9 +1,24 @@
-<div ng-cloak>
+<div id="circularG" ng-hide="vm.displayResponses">
+    <div id="circularG_1" class="circularG"></div>
+    <div id="circularG_2" class="circularG"></div>
+    <div id="circularG_3" class="circularG"></div>
+    <div id="circularG_4" class="circularG"></div>
+    <div id="circularG_5" class="circularG"></div>
+    <div id="circularG_6" class="circularG"></div>
+    <div id="circularG_7" class="circularG"></div>
+    <div id="circularG_8" class="circularG"></div>
+</div>
+
+<div ng-cloak ng-if="vm.displayResponses">
     <div class="row" style="text-align: center;">
        <b> {{ vm.conversation.question }} </b>
     </div>
-<br />
-    <div ng-if="vm.displayResponses">
+
+    <br />
+
+
+
+    <div ng-if="vm.displayResponses" >
         <slick infinite="true" slides-to-show="3" init-onload=true data="vm.conversation.responses" slides-to-scroll="3">
             <div ng-repeat="response in vm.conversation.responses">
                 <div ng-click="vm.answer(response.message)">
