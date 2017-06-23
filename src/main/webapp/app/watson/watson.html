@@ -1,14 +1,15 @@
 <div ng-cloak>
     <div class="row" style="text-align: center;">
-        {{ vm.conversation.question }}
+       <b> {{ vm.conversation.question }} </b>
     </div>
-
+<br />
     <div ng-if="vm.displayResponses">
         <slick infinite="true" slides-to-show="3" init-onload=true data="vm.conversation.responses" slides-to-scroll="3">
             <div ng-repeat="response in vm.conversation.responses">
                 <div ng-click="vm.answer(response.message)">
-                    <p class="btn btn-primary" style="white-space: initial;margin: 4px;">
+                    <p class="btn btn-primary" style="white-space: initial;padding: 2px;margin-right:4px; margin-left:4px">
                         <img style="max-width: 100%;border-radius: 4px;" src="/content/images/logo.png">
+                        <br/>
                         {{response.message}}
                     </p>
                 </div>
@@ -16,6 +17,6 @@
         </slick>
     </div>
 
-    <button type="button" class="btn btn-next alert-info" ng-click="vm.answer(vm.conversation.retour)">Retour</button>
+    <button type="button" class="btn btn-next alert-info" style="display: block; margin : auto;" ng-click="vm.answer(vm.conversation.retour)">Retour</button>
 </div>
 
