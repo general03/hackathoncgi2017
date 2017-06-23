@@ -34,6 +34,6 @@ public class IrritationConjonctivaleChroniqueNonInfectieuse extends Pathogene {
 
         setHasOsdi(false);
 
-        setUrlImage("images/irritation-conjonctivale-chronique-non-infectieuse.png");
+        setUrlImage("/content/images/irr_conj_chro.png");
     }
 }
