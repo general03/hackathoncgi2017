@@ -14,24 +14,24 @@
     </ul>
     <hr>
     <div ng-if="vm.id === 'SecheresseOculaire'">
-        Merci de remplir ce questionnaire pour obtenir le résultat OSDI.
+        <h4 class="text-center title-small">Merci de remplir le questionnaire OSDI</h4>
 
         <div ng-if="vm.osdi.current_question < 12">
-            <p>
+            <span class="text-center">
                 {{ vm.osdi.questions[vm.osdi.current_question].category }}
-            </p>
-            <p>
-                {{ vm.osdi.questions[vm.osdi.current_question].question }}
-            </p>
+            </span>
+            <ul>
+                <li>{{ vm.osdi.questions[vm.osdi.current_question].question }}</li>
+            </ul>
             <div class="row">
-                <div class="btn btn-primary col-sm-3 col-xs-3" style="white-space: initial;margin: 4px;" ng-click="vm.click(4)">Tout le temps</div>
+                <div class="btn btn-primary col-sm-3 col-xs-3" style="white-space: initial;margin: 4px;height: 55px;padding-top: 15px;" ng-click="vm.click(4)">Tout le temps</div>
                 <div class="btn btn-primary col-sm-3 col-xs-3" style="white-space: initial;margin: 4px;" ng-click="vm.click(3)">La plupart du temps</div>
                 <div class="btn btn-primary col-sm-3 col-xs-3" style="white-space: initial;margin: 4px;" ng-click="vm.click(2)">La moitié du temps</div>
             </div>
             <div class="row">
                 <div class="btn btn-primary col-sm-3 col-xs-3" style="white-space: initial;margin: 4px;" ng-click="vm.click(1)">De temps en temps</div>
-                <div class="btn btn-primary col-sm-3 col-xs-3" style="white-space: initial;margin: 4px;" ng-click="vm.click(0)">Jamais</div>
-                <div class="btn btn-primary col-sm-3 col-xs-3" style="white-space: initial;margin: 4px;" ng-click="vm.clickNo()">N/A</div>
+                <div class="btn btn-primary col-sm-3 col-xs-3" style="white-space: initial;margin: 4px;height: 55px;padding-top: 15px;" ng-click="vm.click(0)">Jamais</div>
+                <div class="btn btn-primary col-sm-3 col-xs-3" style="white-space: initial;margin: 4px;height: 55px;padding-top: 15px;" ng-click="vm.clickNo()">N/A</div>
             </div>
         </div>
         <div ng-if="vm.osdi.current_question >= 12">
