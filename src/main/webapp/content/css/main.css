@@ -450,6 +450,16 @@ hr.dash-right-bottom {
     background-color: #0058a6;
     border-color: #0058a6;
 }
+.btn-urgency{
+     color: #fff;
+     background-color: #D95F5E;
+     border-color: #D95F5E;
+}
+.btn-urgency:hover{
+     color: #fff;
+     background-color: #C10001;
+     border-color: #C10001;
+}
 .navbar-brand.logo {
     padding: 0px 15px;
 }
