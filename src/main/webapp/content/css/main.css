@@ -474,7 +474,7 @@ body{
 .title{
     font-family: 'Laila', serif;
     vertical-align: middle;
-    font-size:12px;
+    font-size:10px;
     width: 300px;
     display: inline-block;
     text-align: right;
@@ -488,7 +488,7 @@ body{
 
 .title-small{
     font-family: 'Laila', serif;
-    font-size:8px;
+    font-size:16px;
     font-style : bold;
  }
 
