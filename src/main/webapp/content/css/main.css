@@ -508,6 +508,9 @@ body{
     padding-left: 41px;
     color: #000;
   }
+.export-pdf > a {
+    color: black;
+}
 
 .return-home {
     background: url('../images/arrow.png') #f2f2f2;
