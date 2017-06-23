@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.websocket.server.PathParam;
+
 /**
  * Created by gouttebessisg on 22/06/2017.
  */
@@ -19,19 +21,19 @@ public class PathologieResource {
 
     }
 
-    @GetMapping("/pathologie")
-    public Pathogene getPathologie(@ApiParam String message) {
-        if("Conjonctivite bactérienne".equalsIgnoreCase(message)) {
+    @GetMapping("/pathologie/{namePatho}")
+    public Pathogene getPathologie(@PathParam("namePatho") String namePatho) {
+        if("ConjonctiviteBacterienne".equalsIgnoreCase(namePatho)) {
             return new ConjonctiviteBacterienne();
-        } else if ("Conjonctivite virale".equalsIgnoreCase(message)) {
+        } else if ("ConjonctiviteVirale".equalsIgnoreCase(namePatho)) {
             return new ConjonctiviteVirale();
-        } else if ("Conjonctivite allergique".equalsIgnoreCase(message)) {
+        } else if ("ConjonctiviteAllergique".equalsIgnoreCase(namePatho)) {
             return new ConjonctiviteAllergique();
-        } else if ("Fragilité capillaire conjonctivale".equalsIgnoreCase(message)) {
+        } else if ("FragiliteCapillaireConjonctivale".equalsIgnoreCase(namePatho)) {
             return new FragiliteCapillaireConjonctivale();
-        } else if ("Sécheresse oculaire".equalsIgnoreCase(message)) {
+        } else if ("SecheresseOculaire".equalsIgnoreCase(namePatho)) {
             return new SecheresseOculaire();
-        } else if ("Irritations conjonctivales chroniques non infectieuses".equalsIgnoreCase(message)) {
+        } else if ("IrritationConjonctivaleChroniqueNonInfectieuse".equalsIgnoreCase(namePatho)) {
             return new IrritationConjonctivaleChroniqueNonInfectieuse();
         } else {
             return new Pathogene();
