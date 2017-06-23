@@ -43,6 +43,8 @@ public class ConjonctiviteBacterienne extends Pathogene{
         risqueConseilList.add("Obstruction des glandes lacrymales");
         setConseilSymptome(risqueConseilList);
 
+        setHasOsdi(false);
+
         setUrlImage("images/conjonctivite-bacterienne.png");
     }
 

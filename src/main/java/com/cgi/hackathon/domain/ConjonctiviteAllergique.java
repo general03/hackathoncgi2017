@@ -33,6 +33,8 @@ public class ConjonctiviteAllergique extends Pathogene{
         List<String> risqueConseilList = new ArrayList<>();
         setConseilSymptome(risqueConseilList);
 
+        setHasOsdi(false);
+
         setUrlImage("images/conjonctivite-allergique.png");
     }
 }

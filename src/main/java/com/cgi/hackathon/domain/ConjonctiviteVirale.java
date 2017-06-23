@@ -42,6 +42,8 @@ public class ConjonctiviteVirale extends Pathogene{
         risqueConseilList.add("Obstruction des glandes lacrymales");
         setConseilSymptome(risqueConseilList);
 
+        setHasOsdi(false);
+
         setUrlImage("images/conjonctivite-virale.png");
     }
 }
