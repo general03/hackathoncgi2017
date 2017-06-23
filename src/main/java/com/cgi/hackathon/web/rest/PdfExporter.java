@@ -22,10 +22,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.InputStreamResource;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -47,7 +44,7 @@ public class PdfExporter {
     public static final String RACINE_PHOTO = "src/main/webapp";
 
 
-    public byte[] createPdf(Pathogene bacterienne) throws IOException {
+    public byte[] createPdf(Pathogene bacterienne, String osdi) throws IOException {
         ByteArrayOutputStream pdf = new ByteArrayOutputStream();
 
         //Parameters
@@ -120,6 +117,11 @@ public class PdfExporter {
 
         document.add(conduiteTable);
 
+        //OSDI
+        if(osdi != null) {
+            document.add(new Paragraph("Score OSDI: " + osdi));
+        }
+
         //Close document
         document.close();
 
@@ -127,7 +129,7 @@ public class PdfExporter {
     }
 
     @RequestMapping(value = "/{namePatho}", method = RequestMethod.GET)
-    public ResponseEntity<InputStreamResource> generatePdf(@PathVariable("namePatho") String namePatho) throws IOException {
+    public ResponseEntity<InputStreamResource> generatePdf(@PathVariable("namePatho") String namePatho, @RequestParam(value="osdi", required=false) String osdi) throws IOException {
         Pathogene pathogene;
         if("ConjonctiviteBacterienne".equalsIgnoreCase(namePatho)) {
             pathogene = new ConjonctiviteBacterienne();
@@ -147,12 +149,12 @@ public class PdfExporter {
         return ResponseEntity
             .ok()
             .contentType(MediaType.APPLICATION_PDF)
-            .body(new InputStreamResource(new ByteArrayInputStream(createPdf(pathogene))));
+            .body(new InputStreamResource(new ByteArrayInputStream(createPdf(pathogene, osdi))));
     }
 
     @RequestMapping(value = "/mailExample", method = RequestMethod.GET)
     public Boolean sendEmail() throws IOException {
-        mailService.sendEmailWithPdf("antoine.gueleraud@gmail.com", "Report", "content", true, false, createPdf(new ConjonctiviteAllergique()));
+        mailService.sendEmailWithPdf("antoine.gueleraud@gmail.com", "Report", "content", true, false, createPdf(new ConjonctiviteAllergique(), null));
         return true;
     }
 }

@@ -113,7 +113,6 @@
 
         $http.get("api/pathologie/" + vm.id).then(function(response){
             vm.pathologie = response.data
-            console.log(vm.pathologie);
         });
 
         $scope.goUrgency = function() {
