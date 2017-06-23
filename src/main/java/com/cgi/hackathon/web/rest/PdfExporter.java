@@ -62,6 +62,7 @@ public class PdfExporter {
         //Header
         Image image = new Image(ImageDataFactory.create(LOGO));
         Table header = new Table(5);
+        header.setMarginBottom(15);
         header.setBorder(Border.NO_BORDER);
 
         Cell imageCell = new Cell();
