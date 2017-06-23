@@ -10,7 +10,7 @@
     function stateConfig($stateProvider) {
         $stateProvider.state('watson', {
             parent: 'app',
-            url: '/watson',
+            url: '/watson/{retour}',
             data: {
                 authorities: []
             },
