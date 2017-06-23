@@ -9,5 +9,9 @@
 
     function AlertController ($scope, $state, $location) {
         var vm = this;
+
+        $scope.goHome = function() {
+            $location.url('/home');
+        };
     }
 })();
