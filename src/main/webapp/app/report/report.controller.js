@@ -87,7 +87,7 @@
             vm.osdi.answered_question++;
             vm.osdi.score += score;
 
-            vm.osdi.result = vm.osdi.score * 25 / vm.osdi.answered_question;
+            vm.osdi.result = Math.round(vm.osdi.score * 25 / vm.osdi.answered_question);
 
             if(vm.osdi.current_question == 12)
             {
