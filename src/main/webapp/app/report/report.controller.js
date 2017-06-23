@@ -18,8 +18,8 @@
             console.log(vm.pathologie);
         });
 
-        $scope.goHome = function() {
-            $location.url('/home');
+        $scope.goUrgency = function() {
+            $location.url('/urgency');
         };
     }
 })();

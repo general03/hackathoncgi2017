@@ -390,6 +390,9 @@ hr.dash-right-bottom {
     width: 200px;
 
 }
+hr.double-dash {
+	border-top: 3px double #8c8b8b;
+}
 
 .corps-img {
      position: absolute;
@@ -512,6 +515,9 @@ font-size:14px;
     padding-left: 41px;
     color: #000;
   }
+.export-pdf > a {
+    color: black;
+}
 
 .return-home {
     background: url('../images/arrow.png') #f2f2f2;

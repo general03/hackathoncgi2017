@@ -2,31 +2,31 @@
     <h1 class="text-center title-small">Diagnostique : {{ vm.pathologie.nom }}</h1>
 
     <img class="img-responsive center-block" width="100px" src="{{ vm.pathologie.urlImage }}">
+    <hr class="double-dash">
 
-    <h4 class="text-center">Conseils principales</h4>
+    <h4 class="text-center title-small">Conseils principales</h4>
     <div class="text-center-li">{{vm.pathologie.conseilPrincipal}}</div>
     <hr>
 
-    <h4 class="text-center" ng-show="vm.pathologie.conduites.length > 0">Conduites à tenir</h4>
+    <h4 class="text-center title-small" ng-show="vm.pathologie.conduites.length > 0">Conduites à tenir</h4>
     <ul ng-repeat="conduite in vm.pathologie.conduites">
         <li class="text-center-li">{{conduite}}</li>
     </ul>
     <hr>
 
-    <h4 class="text-center" ng-show="vm.pathologie.conseilSymptome.length > 0">Conseils Symptome</h4>
+    <h4 class="text-center title-small" ng-show="vm.pathologie.conseilSymptome.length > 0">Conseils Symptome</h4>
     <ul ng-repeat="sympt in vm.pathologie.conseilSymptome">
         <li class="text-center-li">{{sympt}}</li>
     </ul>
     <hr>
 
-    <h4 class="text-center" ng-show="vm.pathologie.conseilRisque.length > 0">Conseils Risques</h4>
+    <h4 class="text-center title-small" ng-show="vm.pathologie.conseilRisque.length > 0">Conseils Risques</h4>
     <ul ng-repeat="risque in vm.pathologie.conseilRisque">
         <li class="text-center-li">{{ risque }}</li>
     </ul>
     <hr>
 
-    <input type="button" value="&nbsp;Retour accueil" class="btn btn-default return-home" ng-click="goHome()">
+    <input type="button" value="&nbsp;Retour accueil" class="btn btn-default return-home" ng-click="goUrgency()">
 
-    <button type="button" class="btn btn-default alert-success" ><a href="/#!/watson/retour">Retour</a></button>
     <button type="button" class="btn btn-default export-pdf"><a target="_blank" ng-href="/pdfexport/{{vm.id}}">Exporter en PDF</a></button>
 </div>

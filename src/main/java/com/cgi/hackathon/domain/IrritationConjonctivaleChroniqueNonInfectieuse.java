@@ -20,8 +20,8 @@ public class IrritationConjonctivaleChroniqueNonInfectieuse extends Pathogene {
         setSymptomes(symptList);
 
         List<String> condList = new ArrayList<>();
-        condList.add("[1] Lavage oculaire");
-        condList.add("[2] Instiller un collyre anti-irritation");
+        condList.add("Lavage oculaire");
+        condList.add("Instiller un collyre anti-irritation");
         setConduites(condList);
 
         setConseilPrincipal("Consulter un médecin si persistance des symptômes au-delà des 48 h");

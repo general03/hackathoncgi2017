@@ -45,7 +45,7 @@ public class ConjonctiviteBacterienne extends Pathogene{
 
         setHasOsdi(false);
 
-        setUrlImage("/content/images/conj_bac.png");
+        setUrlImage("/content/images/conj_bact.png");
     }
 
 }
