@@ -439,3 +439,28 @@ hr.dash-right-bottom {
 .well {
     background-color: #EFF0F2 !important;
 }
+
+.btn-next{
+     color: #fff;
+     background-color: #01b5d6;
+     border-color: #01b5d6;
+ }
+.btn-next:hover{
+    color: #fff;
+    background-color: #0058a6;
+    border-color: #0058a6;
+}
+.navbar-brand.logo {
+    padding: 0px 15px;
+}
+.logo .logo-img {
+    height: 50px;
+}
+body{
+    font-family: CaviarDreams;
+    font-size: 16px;
+}
+
+.title{
+    font-family: DINPRO-Medium;
+}
