@@ -12,3 +12,5 @@
 
 { 'question': '', 'responses': [ ], 'retour': 'retourq3', 'symptomelib': 'Irritations conjonctivales chroniques non infectieuses', 'symptomecode': 'IrritationConjonctivaleChroniqueNonInfectieuse' }
 { 'question': '', 'responses': [ ], 'retour': 'retourq3', 'symptomelib': 'Sécheresse oculaire', 'symptomecode': 'SecheresseOculaire' }
+
+
