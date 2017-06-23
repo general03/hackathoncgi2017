@@ -6,6 +6,7 @@ import com.ibm.watson.developer_cloud.conversation.v1.model.MessageResponse;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 /**
@@ -19,14 +20,14 @@ public class BotService {
     private static final String PWD = "XG8Kg4KAfuSm";
     private static final String CONVERSATION_VERSION = ConversationService.VERSION_DATE_2017_02_03;
 
-    public MessageResponse interact(MessageResponse context, String message ) {
+    public MessageResponse interact(Map<String,Object> context, String message ) {
 
         ConversationService service = new ConversationService(CONVERSATION_VERSION);
         service.setUsernameAndPassword(BotService.USERNAME, BotService.PWD);
 
         MessageRequest newMessage = new MessageRequest.Builder()
             .inputText(message)
-            .context(context.getContext())
+            .context(context)
             .build();
 
         return service.message(BotService.WORKSPACE_ID, newMessage).execute();

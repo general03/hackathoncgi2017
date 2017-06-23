@@ -1,5 +1,6 @@
 package com.cgi.hackathon.web.rest;
 
+import com.cgi.hackathon.domain.WatsonResponse;
 import com.cgi.hackathon.service.BotService;
 import com.ibm.watson.developer_cloud.conversation.v1.model.MessageResponse;
 import io.swagger.annotations.ApiParam;
@@ -19,8 +20,8 @@ public class WatsonResource {
     }
 
     @PostMapping("/watson-conversation")
-    public MessageResponse interact(@ApiParam MessageResponse context, @ApiParam String message) {
-        return watsonService.interact(context, message);
+    public MessageResponse interact(@RequestBody WatsonResponse response) {
+        return watsonService.interact(response.getContext(), response.getResponse());
     }
 
     @GetMapping("/watson-init")

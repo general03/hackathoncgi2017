@@ -427,3 +427,15 @@ hr.dash-right-bottom {
     background-position: center;
     background-repeat: no-repeat;
 }
+
+.center-eye {
+    margin-top: -40px;
+}
+
+.navbar-default {
+    background-color: #0058a6 !important;
+}
+
+.well {
+    background-color: #EFF0F2 !important;
+}
