@@ -9,10 +9,11 @@
 
     function ReportController($scope, $state, $stateParams, $http, $location) {
         var vm = this;
+        vm.id = $stateParams.id;
 
         vm.pathologie = {};
 
-        $http.get("api/pathologie/" + $stateParams.id).then(function(response){
+        $http.get("api/pathologie/" + vm.id).then(function(response){
             vm.pathologie = response.data
             console.log(vm.pathologie);
         });
