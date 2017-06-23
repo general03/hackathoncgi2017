@@ -18,53 +18,65 @@
             answered_question: 0,
             score: 0,
             questions: [
-                {
+				{
                 	category: "Avez-vous rencontré durant la dernière semaine ?",
-                	question: "une augmentation de la sensibilité à la lumière"
+                	question: "une augmentation de la sensibilité à la lumière",
+                	isNA: false
                 },
                 {
                 	category: "Avez-vous rencontré durant la dernière semaine ?",
-                	question: "une sensation de sable dans les yeux"
+                	question: "une sensation de sable dans les yeux",
+                	isNA: false
                 },
                 {
                 	category: "Avez-vous rencontré durant la dernière semaine ?",
-                	question: "une vision désagréable ou douloureuse"
+                	question: "une vision désagréable ou douloureuse",
+                	isNA: false
                 },
                 {
                 	category: "Avez-vous rencontré durant la dernière semaine ?",
-                	question: "une vision floue"
+                	question: "une vision floue",
+                	isNA: false
                 },
                 {
                 	category: "Avez-vous rencontré durant la dernière semaine ?",
-                	question: "une baisse de vision"
+                	question: "une baisse de vision",
+                	isNA: false
                 },
                 {
                 	category: "Avez-vous ressenti une gène oculaire durant la dernière semaine ?",
-                	question: "pour lire"
+                	question: "pour lire",
+                	isNA: true
                 },
                 {
                 	category: "Avez-vous ressenti une gène oculaire durant la dernière semaine ?",
-                	question: "pour conduire de nuit"
+                	question: "pour conduire de nuit",
+                	isNA: true
                 },
                 {
                 	category: "Avez-vous ressenti une gène oculaire durant la dernière semaine ?",
-                	question: "pour travailler sur un ordinateur ou sur un guichet automatique bancaire"
+                	question: "pour travailler sur un ordinateur ou sur un guichet automatique bancaire",
+                	isNA: true
                 },
                 {
                 	category: "Avez-vous ressenti une gène oculaire durant la dernière semaine ?",
-                	question: "pour regarder la TV"
+                	question: "pour regarder la TV",
+                	isNA: true
                 },
                 {
                 	category: "Avez-vous ressenti une inconfort oculaire durant la dernière semaine ?",
-                	question: "en présence de vent"
+                	question: "en présence de vent",
+                	isNA: true
                 },
                 {
                 	category: "Avez-vous ressenti une inconfort oculaire durant la dernière semaine ?",
-                	question: "dans des espaces avec de faibles taux d'humidité"
+                	question: "dans des espaces avec de faibles taux d'humidité",
+                	isNA: true
                 },
                 {
                 	category: "Avez-vous ressenti une inconfort oculaire durant la dernière semaine ?",
-                	question: "dans des espaces conditionnés"
+                	question: "dans des espaces conditionnés",
+                	isNA: true
                 }
             ]
         };
