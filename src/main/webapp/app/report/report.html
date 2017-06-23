@@ -17,26 +17,27 @@
         <h4 class="text-center title-small">Merci de remplir le questionnaire OSDI</h4>
 
         <div ng-if="vm.osdi.current_question < 12">
-            <span class="text-center">
+            <h4 class="text-center">
                 {{ vm.osdi.questions[vm.osdi.current_question].category }}
-            </span>
-            <ul>
-                <li>{{ vm.osdi.questions[vm.osdi.current_question].question }}</li>
-            </ul>
+            </h4>
+            <h4>
+                {{ vm.osdi.questions[vm.osdi.current_question].question }}
+            </h4>
             <div class="row">
-                <div class="btn btn-primary col-sm-3 col-xs-3" style="white-space: initial;margin: 4px;height: 55px;padding-top: 15px;" ng-click="vm.click(4)">Tout le temps</div>
-                <div class="btn btn-primary col-sm-3 col-xs-3" style="white-space: initial;margin: 4px;" ng-click="vm.click(3)">La plupart du temps</div>
-                <div class="btn btn-primary col-sm-3 col-xs-3" style="white-space: initial;margin: 4px;" ng-click="vm.click(2)">La moitié du temps</div>
+                <div class="btn btn-primary col-sm-3 col-xs-3" style="white-space: initial;margin: 4px;height: 55px;" ng-click="vm.click(4)">Tout le temps</div>
+                <div class="btn btn-primary col-sm-3 col-xs-3" style="white-space: initial;margin: 4px;height: 55px;" ng-click="vm.click(3)">La plupart du temps</div>
+                <div class="btn btn-primary col-sm-3 col-xs-3" style="white-space: initial;margin: 4px;height: 55px;" ng-click="vm.click(2)">La moitié du temps</div>
             </div>
             <div class="row">
-                <div class="btn btn-primary col-sm-3 col-xs-3" style="white-space: initial;margin: 4px;" ng-click="vm.click(1)">De temps en temps</div>
+                <div class="btn btn-primary col-sm-3 col-xs-3" style="white-space: initial;margin: 4px;height: 55px;" ng-click="vm.click(1)">De temps en temps</div>
                 <div class="btn btn-primary col-sm-3 col-xs-3" style="white-space: initial;margin: 4px;height: 55px;padding-top: 15px;" ng-click="vm.click(0)">Jamais</div>
                 <div class="btn btn-primary col-sm-3 col-xs-3" style="white-space: initial;margin: 4px;height: 55px;padding-top: 15px;" ng-click="vm.clickNo()">N/A</div>
             </div>
         </div>
-        <div ng-if="vm.osdi.current_question >= 12">
-            FINI {{vm.osdi.result | number : 1}}
+        <div class="text-center" ng-if="vm.osdi.current_question >= 12">
+            Votre score OSCI {{vm.osdi.result | number : 1}}
         </div>
+        <canvas  id="score-graph"></canvas>
     </div>
 
     <h4 class="text-center title-small" ng-show="vm.pathologie.conseilSymptome.length > 0">Conseils Symptome</h4>

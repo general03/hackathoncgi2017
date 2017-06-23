@@ -20,66 +20,67 @@
             questions: [
 				{
                 	category: "Avez-vous rencontré durant la dernière semaine ?",
-                	question: "une augmentation de la sensibilité à la lumière",
+                	question: "1) une augmentation de la sensibilité à la lumière",
                 	isNA: false
                 },
                 {
                 	category: "Avez-vous rencontré durant la dernière semaine ?",
-                	question: "une sensation de sable dans les yeux",
+                	question: "2) une sensation de sable dans les yeux",
                 	isNA: false
                 },
                 {
                 	category: "Avez-vous rencontré durant la dernière semaine ?",
-                	question: "une vision désagréable ou douloureuse",
+                	question: "3) une vision désagréable ou douloureuse",
                 	isNA: false
                 },
                 {
                 	category: "Avez-vous rencontré durant la dernière semaine ?",
-                	question: "une vision floue",
+                	question: "4) une vision floue",
                 	isNA: false
                 },
                 {
                 	category: "Avez-vous rencontré durant la dernière semaine ?",
-                	question: "une baisse de vision",
+                	question: "5) une baisse de vision",
                 	isNA: false
                 },
                 {
                 	category: "Avez-vous ressenti une gène oculaire durant la dernière semaine ?",
-                	question: "pour lire",
+                	question: "6) pour lire",
                 	isNA: true
                 },
                 {
                 	category: "Avez-vous ressenti une gène oculaire durant la dernière semaine ?",
-                	question: "pour conduire de nuit",
+                	question: "7) pour conduire de nuit",
                 	isNA: true
                 },
                 {
                 	category: "Avez-vous ressenti une gène oculaire durant la dernière semaine ?",
-                	question: "pour travailler sur un ordinateur ou sur un guichet automatique bancaire",
+                	question: "8) pour travailler sur un ordinateur ou sur un guichet automatique bancaire",
                 	isNA: true
                 },
                 {
                 	category: "Avez-vous ressenti une gène oculaire durant la dernière semaine ?",
-                	question: "pour regarder la TV",
+                	question: "9) pour regarder la TV",
                 	isNA: true
                 },
                 {
                 	category: "Avez-vous ressenti une inconfort oculaire durant la dernière semaine ?",
-                	question: "en présence de vent",
+                	question: "10) en présence de vent",
                 	isNA: true
                 },
                 {
                 	category: "Avez-vous ressenti une inconfort oculaire durant la dernière semaine ?",
-                	question: "dans des espaces avec de faibles taux d'humidité",
+                	question: "11) dans des espaces avec de faibles taux d'humidité",
                 	isNA: true
                 },
                 {
                 	category: "Avez-vous ressenti une inconfort oculaire durant la dernière semaine ?",
-                	question: "dans des espaces conditionnés",
+                	question: "12) dans des espaces conditionnés",
                 	isNA: true
                 }
             ]
         };
+
 
         vm.click = function(score) {
             vm.osdi.current_question++;
@@ -87,6 +88,23 @@
             vm.osdi.score += score;
 
             vm.osdi.result = vm.osdi.score * 25 / vm.osdi.answered_question;
+
+            if(vm.osdi.current_question == 12)
+            {
+                var ctx = document.getElementById('score-graph').getContext('2d');
+                var chart = new Chart(ctx, {
+                 type: 'horizontalBar',
+                 data: {
+                     labels: ["OSDI"],
+                     datasets: [{
+                         label: "Score OSDI ",
+                         backgroundColor: '#01b5d6',
+                         borderColor: '#0058a6',
+                         data: [vm.osdi.result]
+                     }]
+                 }
+                });
+            }
         }
 
         vm.clickNo = function() {
