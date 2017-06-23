@@ -2,11 +2,15 @@ package com.cgi.hackathon.web.rest;
 
 import com.cgi.hackathon.domain.*;
 import com.cgi.hackathon.service.MailService;
+import com.cgi.hackathon.service.TextFooterEventHandler;
 import com.google.common.collect.Lists;
 import com.itextpdf.io.image.ImageDataFactory;
+import com.itextpdf.kernel.events.PdfDocumentEvent;
 import com.itextpdf.kernel.geom.PageSize;
+import com.itextpdf.kernel.geom.Rectangle;
 import com.itextpdf.kernel.pdf.PdfDocument;
 import com.itextpdf.kernel.pdf.PdfWriter;
+import com.itextpdf.kernel.pdf.canvas.PdfCanvas;
 import com.itextpdf.layout.Document;
 import com.itextpdf.layout.border.Border;
 import com.itextpdf.layout.element.*;
@@ -40,20 +44,8 @@ public class PdfExporter {
     private final Logger log = LoggerFactory.getLogger(PdfExporter.class);
 
     public static final String LOGO = "src/main/webapp/content/images/logo.png";
-    public static final String SYMPTOMES = "src/main/webapp/content/images/symptome.jpg";
+    public static final String RACINE_PHOTO = "src/main/webapp";
 
-    public Pathogene bacterienne() {
-        Pathogene bacterienne = new Pathogene();
-        bacterienne.setNom("Conjonctivite Bactérienne");
-        bacterienne.setSymptomes(Lists.newArrayList(
-            "Sécrétions purulentes",
-            "Rougeur diffuse uni ou bilatérale",
-            "Pus dans l'angle interne",
-            "Cils agglutinés",
-            "Paupières collées au réveil"
-        ));
-        return bacterienne;
-    }
 
     public byte[] createPdf(Pathogene bacterienne) throws IOException {
         ByteArrayOutputStream pdf = new ByteArrayOutputStream();
@@ -65,6 +57,7 @@ public class PdfExporter {
         //Open Document
         PdfDocument pdfDocument = new PdfDocument(new PdfWriter(pdf));
         Document document = new Document(pdfDocument, PageSize.A4);
+        pdfDocument.addEventHandler(PdfDocumentEvent.END_PAGE, new TextFooterEventHandler(document));
 
         //Header
         Image image = new Image(ImageDataFactory.create(LOGO));
@@ -103,12 +96,28 @@ public class PdfExporter {
         symptomeTable.addCell(symptomeTextCell);
 
         Cell symptomeImageCell = new Cell();
-        Image symptome = new Image(ImageDataFactory.create(SYMPTOMES));
-        symptomeImageCell.add(symptome.setWidthPercent(100));
+        Image symptome = new Image(ImageDataFactory.create(RACINE_PHOTO + bacterienne.getUrlImage()));
+        symptomeImageCell.add(symptome.setWidthPercent(75));
         symptomeImageCell.setBorder(Border.NO_BORDER);
         symptomeTable.addCell(symptomeImageCell);
 
         document.add(symptomeTable);
+
+        //Conduite
+        document.add(new Paragraph("Conduite a tenir").setFontSize(titleSize));
+
+        Table conduiteTable = new Table(2);
+        conduiteTable.setBorder(Border.NO_BORDER);
+
+        Cell conduiteTextCell = new Cell();
+        List conduiteList = new List();
+        bacterienne.getConduites().forEach(s -> conduiteList.add(new ListItem(s)));
+        conduiteTextCell.add(conduiteList);
+        conduiteTextCell.setBorder(Border.NO_BORDER);
+        conduiteTextCell.setVerticalAlignment(VerticalAlignment.MIDDLE);
+        conduiteTable.addCell(conduiteTextCell);
+
+        document.add(conduiteTable);
 
         //Close document
         document.close();
@@ -140,17 +149,9 @@ public class PdfExporter {
             .body(new InputStreamResource(new ByteArrayInputStream(createPdf(pathogene))));
     }
 
-    @RequestMapping(value = "/example", method = RequestMethod.GET)
-    public ResponseEntity<InputStreamResource> generatePdf() throws IOException {
-        return ResponseEntity
-            .ok()
-            .contentType(MediaType.APPLICATION_PDF)
-            .body(new InputStreamResource(new ByteArrayInputStream(createPdf(bacterienne()))));
-    }
-
     @RequestMapping(value = "/mailExample", method = RequestMethod.GET)
     public Boolean sendEmail() throws IOException {
-        mailService.sendEmailWithPdf("antoine.gueleraud@gmail.com", "Report", "content", true, false, createPdf(bacterienne()));
+        mailService.sendEmailWithPdf("antoine.gueleraud@gmail.com", "Report", "content", true, false, createPdf(new ConjonctiviteAllergique()));
         return true;
     }
 }
