@@ -21,8 +21,8 @@ public class SecheresseOculaire extends Pathogene{
         setSymptomes(symptList);
 
         List<String> condList = new ArrayList<>();
-        condList.add("[1] Lavage oculaire");
-        condList.add("[2] Instiller un substitut lacrymal");
+        condList.add("Lavage oculaire");
+        condList.add("Instiller un substitut lacrymal");
         setConduites(condList);
 
         setConseilPrincipal(null);
@@ -35,6 +35,6 @@ public class SecheresseOculaire extends Pathogene{
 
         setHasOsdi(true);
 
-        setUrlImage("images/secheresse-oculaire.png");
+        setUrlImage("/content/images/sech_oc.png");
     }
 }
