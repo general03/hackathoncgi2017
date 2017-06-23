@@ -10,6 +10,7 @@
     function WatsonController ($scope, $state, $http) {
         var vm = this;
 
+        vm.isReady = undefined;
         vm.conversation = {
             context: {},
             question: "",
@@ -29,16 +30,18 @@
             vm.conversation.context = response.context;
             vm.conversation.question = responseJson.question;
             vm.conversation.responses = responseJson.responses;
+            vm.isReady = true;
             console.log(vm.conversation);
         }
 
-
-
-        vm.interact = interact;
-        function interact() {
-            return $http.post('api/watson-conversation',{ 'context' : vm.conversation.context, 'message' : "Choix 1"}).then(function(response) {
-
+        vm.answer = function(message) {
+            console.log(message);
+            $http
+            .post('api/watson-conversation', { 'context' : vm.conversation.context, 'response' : message})
+            .then(function(response) {
+                console.log(response);
             });
+
         }
    }
 })();
