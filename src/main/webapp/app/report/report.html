@@ -24,18 +24,18 @@
                 {{ vm.osdi.questions[vm.osdi.current_question].question }}
             </p>
             <div class="row">
-                <div class="btn btn-primary col-sm-3 col-xs-3" style="white-space: initial;margin: 4px;" ng-click="vm.click(4)">Tout le temps</div>
-                <div class="btn btn-primary col-sm-3 col-xs-3" style="white-space: initial;margin: 4px;" ng-click="vm.click(3)">La plupart du temps</div>
-                <div class="btn btn-primary col-sm-3 col-xs-3" style="white-space: initial;margin: 4px;" ng-click="vm.click(2)">La moitié du temps</div>
+                <button class="btn btn-primary col-sm-3 col-xs-3" style="white-space: initial;margin: 4px;" ng-click="vm.click(4)">Tout le temps</button>
+                <button class="btn btn-primary col-sm-3 col-xs-3" style="white-space: initial;margin: 4px;" ng-click="vm.click(3)">La plupart du temps</button>
+                <button class="btn btn-primary col-sm-3 col-xs-3" style="white-space: initial;margin: 4px;" ng-click="vm.click(2)">La moitié du temps</button>
             </div>
             <div class="row">
-                <div class="btn btn-primary col-sm-3 col-xs-3" style="white-space: initial;margin: 4px;" ng-click="vm.click(1)">De temps en temps</div>
-                <div class="btn btn-primary col-sm-3 col-xs-3" style="white-space: initial;margin: 4px;" ng-click="vm.click(0)">Jamais</div>
-                <div class="btn btn-primary col-sm-3 col-xs-3" style="white-space: initial;margin: 4px;" ng-click="vm.clickNo()">N/A</div>
+                <button class="btn btn-primary col-sm-3 col-xs-3" style="white-space: initial;margin: 4px;" ng-click="vm.click(1)">De temps en temps</button>
+                <button class="btn btn-primary col-sm-3 col-xs-3" style="white-space: initial;margin: 4px;" ng-click="vm.click(0)">Jamais</button>
+                <button class="btn btn-primary col-sm-3 col-xs-3" style="white-space: initial;margin: 4px;" ng-click="vm.clickNo()" ng-disabled="!vm.osdi.questions[vm.osdi.current_question].isNA">N/A</button>
             </div>
         </div>
         <div ng-if="vm.osdi.current_question >= 12">
-            FINI {{vm.osdi.result}}
+            FINI {{vm.osdi.result | number : 1}}
         </div>
     </div>
 
