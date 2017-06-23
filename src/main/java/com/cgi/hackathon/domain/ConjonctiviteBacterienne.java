@@ -21,8 +21,8 @@ public class ConjonctiviteBacterienne extends Pathogene{
         setSymptomes(symptList);
 
         List<String> condList = new ArrayList<>();
-        condList.add("[1] Lavage oculaire : nettoyer les sécrétions oculaires");
-        condList.add("[2]Instiller un collyre antiseptique");
+        condList.add("Lavage oculaire : nettoyer les sécrétions oculaires");
+        condList.add("Instiller un collyre antiseptique");
         setConduites(condList);
 
         setConseilPrincipal("Conjonctivites bactériennes graves [1] ou en présence de facteurs de risque [2]");
@@ -45,7 +45,7 @@ public class ConjonctiviteBacterienne extends Pathogene{
 
         setHasOsdi(false);
 
-        setUrlImage("images/conjonctivite-bacterienne.png");
+        setUrlImage("/content/images/conj_bac.png");
     }
 
 }

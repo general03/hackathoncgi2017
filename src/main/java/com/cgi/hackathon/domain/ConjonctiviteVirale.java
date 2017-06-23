@@ -44,6 +44,6 @@ public class ConjonctiviteVirale extends Pathogene{
 
         setHasOsdi(false);
 
-        setUrlImage("images/conjonctivite-virale.png");
+        setUrlImage("/content/images/conj_vir.png");
     }
 }

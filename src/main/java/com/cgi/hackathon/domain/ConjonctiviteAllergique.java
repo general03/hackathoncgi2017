@@ -35,6 +35,6 @@ public class ConjonctiviteAllergique extends Pathogene{
 
         setHasOsdi(false);
 
-        setUrlImage("images/conjonctivite-allergique.png");
+        setUrlImage("/content/images/conj_all.png");
     }
 }

@@ -34,6 +34,6 @@ public class FragiliteCapillaireConjonctivale extends Pathogene{
 
         setHasOsdi(false);
 
-        setUrlImage("images/fragilite-capillaire-conjonctivale.png");
+        setUrlImage("/content/images/frag_cap.png");
     }
 }
