@@ -7,14 +7,14 @@ import java.util.List;
  * Created by guelerauda on 22/06/2017.
  */
 public class Pathogene implements Serializable {
-    private String nom;
-    private List<String> symptomes;
-    private List<String> conduites;
-    private String conseilPrincipal;
-    private List<String> conseilSymptome;
-    private List<String> conseilRisque;
-    private String urlImage;
-    private boolean hasOsdi;
+    private static String nom;
+    private static List<String> symptomes;
+    private static List<String> conduites;
+    private static String conseilPrincipal;
+    private static List<String> conseilSymptome;
+    private static List<String> conseilRisque;
+    private static String urlImage;
+    private static boolean hasOsdi;
 
     public boolean isHasOsdi() {
         return hasOsdi;
