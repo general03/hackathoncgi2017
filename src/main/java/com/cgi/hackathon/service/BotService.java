@@ -15,9 +15,9 @@ import java.util.Optional;
 @Service
 public class BotService {
 
-    private static final String WORKSPACE_ID = "de0812fb-6f56-4e39-abe4-06224794710b";
-    private static final String USERNAME = "0689bca2-fe9c-405f-bb06-984de3e826cb";
-    private static final String PWD = "XG8Kg4KAfuSm";
+    private static final String WORKSPACE_ID = "dfd5a50a-8252-4b2f-8c07-ccba0596d21c";
+    private static final String USERNAME = "ab5edea0-1d58-4bdc-8db2-bc7fcdf01f8b";
+    private static final String PWD = "0olru7MVhpEE";
     private static final String CONVERSATION_VERSION = ConversationService.VERSION_DATE_2017_02_03;
 
     public MessageResponse interact(Map<String,Object> context, String message ) {

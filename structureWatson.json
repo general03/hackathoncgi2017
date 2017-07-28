@@ -5,6 +5,7 @@
 
 { 'question': '', 'responses': [ ], 'retour': 'retourq1', 'symptomelib': 'Conjonctivite allergique', 'symptomecode': 'ConjonctiviteAllergique' }
 { 'question': '', 'responses': [ ], 'retour': 'retourq1', 'symptomelib': 'Fragilité capillaire conjonctivale', 'symptomecode': 'FragiliteCapillaireConjonctivale' }
+
 { 'question': '', 'responses': [ ], 'retour': 'retourq2', 'symptomelib': 'Conjonctivite bactérienne', 'symptomecode': 'ConjonctiviteBacterienne' }
 { 'question': '', 'responses': [ ], 'retour': 'retourq2', 'symptomelib': 'Conjonctivite virale', 'symptomecode': 'ConjonctiviteVirale' }
 
